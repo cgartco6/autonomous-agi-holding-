@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../deploy/frontend.Dockerfile
+    ports:
+      - "80:80"
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../deploy/backend.Dockerfile
+    environment:
+      - NODE_ENV=production
+      - STRIPE_KEY=${STRIPE_KEY}
+      - PAYPAL_CLIENT_ID=${PAYPAL_CLIENT_ID}
+      - PAYFAST_KEY=${PAYFAST_KEY}
+      - FNB_API_KEY=${FNB_API_KEY}
+    ports:
+      - "5000:5000"
+    depends_on:
+      - ai-engine
+  ai-engine:
+    build:
+      context: ./ai
+      dockerfile: ../deploy/ai.Dockerfile
+    ports:
+      - "6000:6000"
