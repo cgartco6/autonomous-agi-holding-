@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous AGI Holding Company</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<header>AGI Autonomous Holding Company Portal</header>
+<div class="container">
+<!-- Marketplace -->
+<div class="section">
+<h2>Marketplace</h2>
+<div id="marketplace" class="marketplace"></div>
+<div class="cart">
+<h3>Shopping Cart</h3>
+<div id="cartItems"></div>
+<div id="total"></div>
+<button onclick="checkout()">Checkout</button>
+</div>
+</div>
+
+<!-- Blockchain -->
+<div class="section">
+<h2>Blockchain Tokens</h2>
+<div id="tokenDashboard"></div>
+<button onclick="mintToken()">Mint Tokens</button>
+</div>
+
+<!-- AI & KPI -->
+<div class="section">
+<h2>AI Agents & Dashboard</h2>
+<div id="aiDashboard" class="dashboard"></div>
+<div id="wsLog" class="websocket-log">WebSocket logs...</div>
+</div>
+
+<!-- Investment Fund -->
+<div class="section">
+<h2>AI Investment Fund</h2>
+<div id="fundDashboard" class="fund-dashboard"></div>
+<button onclick="allocateCapital()">Autonomous Capital Allocation</button>
+</div>
+
+<!-- Compliance & PDF -->
+<div class="section">
+<h2>Compliance & Reports</h2>
+<button onclick="generatePDF()">Generate PDF</button>
+<div id="pdfLog" class="pdf-log"></div>
+</div>
+
+<!-- Payout -->
+<div class="section">
+<h2>Weekly Payout System</h2>
+<button onclick="distributePayouts()">Distribute Weekly Payouts</button>
+<div id="payoutLog" class="payout-log"></div>
+</div>
+
+<!-- Marketing -->
+<div class="section">
+<h2>Marketing Engine</h2>
+<button onclick="generateMarketingContent()">Generate Marketing Content</button>
+<div id="marketingContent" class="marketing-cards"></div>
+<button onclick="generateLandingPage()">Generate Landing Page</button>
+<div id="landingPagePreview"></div>
+</div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
